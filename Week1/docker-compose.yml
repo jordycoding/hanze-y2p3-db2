@@ -1,0 +1,19 @@
+version: '3'
+services:
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: databases
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./sakila:/sakila
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 3030:80
+    environment:
+      - PMA_ARBITRARY=1
