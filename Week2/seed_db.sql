@@ -14,4 +14,14 @@ VALUES (1, 1),
        (1,2),
        (1,3);
 
-INSERT INTO test (module_id, student_id, name, grade)
+INSERT INTO test (module_id, name, credits)
+VALUES (1, 'Final exam databses', 5),
+       (2, 'SQL statements', 5),
+        (3, 'MongoDB', 5);
+
+INSERT INTO student_theme (student_id, theme_id, start_year, start_quarter)
+VALUES (1, 1, 2020, 1);
+
+INSERT INTO grades (student_id, module_id, grade)
+VALUES (1, 1, 8);
+
