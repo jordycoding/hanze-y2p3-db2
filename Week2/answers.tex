@@ -78,12 +78,17 @@
 		\part
 		\includegraphics[]{question2b}
 
-		Door de fields nullbable te maken en eventueel constraints toe te passen kan ervoor worden gezorgd dat alle typen posts in 1 table kunnen worden opgeslagen
+		Door de fields nullbable te maja ken en eventueel constraints toe te passen kan ervoor worden gezorgd dat alle typen posts in 1 table kunnen worden opgeslagen
 		\part
 		Ze zijn gecompliceerder dan traditionele SQL relations. De queries die geschreven moeten worden/de orm methods die gebruikt moeten worden zijn gecompliceerder en slechter overzichtelijk dan normaal gesproken. Hierdoor wordt de database minder overzichtelijk en in de toekomst mogelijk lastiger te onderhouden.
 	\end{parts}
 	\question
 	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{question3}
+	\question
+	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{question4}
+
+	Een customer heeft 0 of meer deliveries, deze deliveries hebben allemaal 1 drone, 1 drone kan echter 0 of meer deliveries hebben.
+	Een drone heeft 1 parent company en 1 company kan 1 of meer drones hebben. Elke delivery heeft 1 record voor weather conditions, route informatie(tijd die route heeft geduurd etc.). Elke delivery heeft 1 of meer packages en twee locations(source, destination). Verder kan een delivery status updates hebben (bijvoorbeeld huidige locatie) die op worden geslagen in flight.
 \end{questions}
 
 \end{document}
