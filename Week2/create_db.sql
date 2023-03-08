@@ -69,8 +69,6 @@ ALTER TABLE student_theme
     ADD FOREIGN KEY (theme_id) REFERENCES theme (id);
 ALTER TABLE test
     ADD FOREIGN KEY (module_id) REFERENCES module (id);
-ALTER TABLE test
-    ADD FOREIGN KEY (student_id) REFERENCES student (id);
 ALTER TABLE grades
     ADD FOREIGN KEY (student_id) REFERENCES student (id);
 ALTER TABLE grades
