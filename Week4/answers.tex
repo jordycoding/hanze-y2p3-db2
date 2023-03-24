@@ -1,5 +1,5 @@
 \documentclass{exam}
-\usepackage{xcolor, minted, graphicx, fontspec, siunitx, pgfplots}
+\usepackage{xcolor, minted, graphicx, fontspec, siunitx, pgfplots, tabularx}
 \setmainfont{Open Sans}
 \graphicspath{ {./images} }
 
@@ -98,6 +98,41 @@
             met index & 45 & 53 & 50 & 50 & 47 & 54 & 41 & 45 & 39 & 45 \\
             \hline
         \end{tabular}
+        \part
+        \includegraphics[height=\textheight, width=\textwidth, keepaspectratio]{question5d.png}
+        In het verloop lijkt in beide grafieken weinig logica te zitten. Met index is de tijd die nodig is consistent korter. Dit valt te verklaren doordat deze index alle data representeert als een b-tree geordend op basis van de prijs. Om te kijken naar een bepaalde prijs range hoeft dus niet de hele tabel lansgegaan te worden. Er hoeft alleen in de tree gekeken te worden naar de bedragen en aan de hand hiervan kunnen met de primary key de bijbehorende waardes geselecteerd worden.
+    \end{parts}
+    \question
+    \begin{parts}
+        \part
+        \includegraphics[height=\textheight, width=\textwidth, keepaspectratio]{question6a}
+        \part
+        65535
+        \part
+        \includegraphics[height=\textheight, width=\textwidth, keepaspectratio]{question6c}
+        \part
+        Omdat het result gecached wordt, aangezien er indexes aanwezig zijn kan door de analyze commands worden gecheckt of de nieuwe rows de query beinvloeden.
+        \part
+        \begin{enumerate}
+            \item
+            Welke producttabel?
+            \item
+                \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+                    \hline
+                    tabel & category & film\_category & film & film\_actor & actor \\
+                    \hline
+                    aantal rijen & 375 & 375 & 1 & 1 & 1 \\
+                    \hline
+                    gebruikte key & & & & & \\
+                \end{tabular}
+                \includegraphics[height=\textheight, width=\textwidth, keepaspectratio]{question6d}
+        \end{enumerate}
+        \part
+        \part
+        Een index op actor.first\_name, category\_name, scheelt ongeveer 20 ms
+
+
+        \includegraphics[height=\textheight, width=\textwidth, keepaspectratio]{question6e}
     \end{parts}
 \end{questions}
 \end{document}

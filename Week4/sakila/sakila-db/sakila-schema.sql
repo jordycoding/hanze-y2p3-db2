@@ -39,7 +39,7 @@ USE sakila;
 
 --
 -- Table structure for table `actor`
---@localhost
+--
 
 CREATE TABLE actor (
   actor_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
