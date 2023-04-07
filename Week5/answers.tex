@@ -1,0 +1,71 @@
+\documentclass{exam}
+\usepackage{xcolor, minted, graphicx, fontspec, siunitx, pgfplots, tabularx}
+\setmainfont{Open Sans}
+
+\author{Jordy Alkema}
+\title {Homework Week 3}
+
+\begin{document}
+\maketitle
+\begin{questions}
+\question
+    \begin{parts}
+        \part
+        \begin{itemize}
+        \item
+            Bekendheid: Veel developers kennen SQL doordat relationele databases zo'n beetje de standaard zijn. Deze bekendheid zorgt ervoor dat veel mensen er ervaring mee hebben en het makkelijk is om mensen te vinden die ermee kunnen werken.
+        \item
+            Data integriteit: Doordat een relationele database het concept van een schema kent is de kans een stuk kleiner dat data fout of corrupt wordt opgeslagen.
+        \end{itemize}
+        \part
+        \begin{itemize}
+            \item
+                Schaalbaarheid: Relationele databases zijn niet erg goed schaalbaar bij bijvoorbeeld grotere hoeveelheden data over mmeerdere servers verspreid. Veel NoSQL databases zijn echter een stuk beter schaalbaar over clusters van servers.
+            \item
+                Flexibiliteit: Het aanpassen van het schema van een relationele database in production is veel werk. Dit omdat ook alle al opgeslagen data moet worden aangepast om te voldoen aan het nieuwe schema. NoSQL databases zijn echter een stuk flexibeler aangezien er geen strict schema is.
+        \end{itemize}
+        \part
+        \begin{itemize}
+            \item
+                Schaalbaarheid betekent de capaciteit van een database om op te kunnen schakelen, over bijvoorbeeld meerdere servers. Dit kan echter ten koste gaan van bepaalde functionaliteit. Omdat functionaliteit CPU en storage capacity opneemt is het een trade off met schaalbaarheid.
+            \item
+                Flexibiliteit houdt in dit geval in dat verschillende data kan worden opgeslagen. Zonder dat het zich bijvoorbeeld hoeft te houden aan een bepaald schema. Het toevoegen van een field is hierdoor niet een moeilijk iets zoals het bij bijvoorbeeld relational databases is. Dit gaat echter ten koste van bepaalde functionaliteit, zoals relaties of de zekerheid van een strict schema.
+        \end{itemize}
+        \part
+        Aangezien het snel is om data hiermee op te vragen, aangezien alle benodigde data hiervoor op 1 server staat. Maar het wel schaalbaar blijft aangezien niet alle data wordt opgeslagen op 1 server.
+        \part
+        Beiden kennen het concept van schema's en beiden hebben ondersteuning voor relations(document stores hebben alleen minder goede support voor many to many relations). Beiden zijn echter verschillende database paradigms en zijn dus geschikt voor verschillende dingen. 
+        \part
+        \begin{itemize}
+            \item
+                Caching: Vanwege de snelheid(mede door het in-memory werken) is redis erg geschikt voor caching. Aangezien je hierbij snel data wil kunnen retrieven.
+            \item
+                Session management: 
+                Key value databases zoals redis hebben goede support voor scalability/redundancy voor het opslaan over meerdere servers. Door dit en de hoge snelheid door (deels) in-memory te kunnen werken zijn ze erg geschikt voor het opslaan van user sessions.
+        \end{itemize}
+    \end{parts}
+    \question
+    \begin{parts}
+        \part
+        Als het puur gaat om het analyseren van relaties is een graph database het meest geschikt aangezien deze het makkelijk maakt om relations op te slaan en goed schaalt met grotere hoeveelheden data.
+        \part
+        Een key/value database is hier geschikt aangezien deze geschikt is om kleinere hoeveelheden data zoals deze op te slaan en snel weer te kunnen retrieven.
+        \part
+        Omdat het hier vaak gaat om gestructureerde data is een relationele database het handigste. Dit is misschien niet zo flexibel als andere typen databases maar als de structuur van de data van tevoren al bekend is is dit niet van groot belang.
+        \part
+        Een key/value database is hier geschikt voor. Voor het delen van foto's zou een simpel id gekoppeld kunnen worden aan elke foto. Key/value databases zijn hier geschikt voor aangezien ze eenvoudig zijn in gebruik en bovendien erg snel zijn.
+        \part
+        Aangezien het hier gaat om een tree-like structuur met relaties die gezien kunnen worden als one-to-many of many-to-many is een document-based database hier geschikt voor.
+        \part
+        Een timeseries database is hier het meest geschikt voor. Dit omdat deze bedoeld zijn om grote hoeveelheden tijdsgebonden data op te slaan en berekeningen uit te voeren over deze data.
+        \part
+        Het zoeken naar bepaalde waardes in een database maakt een document=based database erg geschikt. Verder is deze handig doordat er niet een strict schema is voor de data en dus verschillend gestructureerde logs kunnen worden opgeslagen.
+        \part
+        Een timeseries database is hier erg geschikt voor. Deze hebben functies om te kunnen werken met grote hoeveelheden tijdsgebonden data en zijn bedoeld om hiermee te kunnen rekenen.
+        \part
+        Aangezien hier een snelle database voor vereist is als het gaat om grote hoeveelheden data is een key/value database zoals redis hier het meest geschikt voor.
+        \part
+        Een graph-based database is geschikt voor grote hoeveelheden relaties. Dit aangezien relaties makkelijk kunnen worden opgeslagen en de snelheid goed schaalt met grote hoeveelheden data. Dat maakt dit type database geschikt voor deze toepassing.
+    \end{parts}
+\end{questions}
+\end{document}
